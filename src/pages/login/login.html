@@ -1,0 +1,42 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/images/splash.jpg">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+    <div class= "logo">
+        <img src="assets/images/splash.jpg">
+    </div>
+
+    <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input type = "text" [(ngModel)]="user.email"><ion-icon name="person"></ion-icon></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type = "password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+
+    <div class = "center-button pad1">
+        <button ion-button (click) = "login(user)" full>Login</button>
+    </div>
+
+    <!--<div class = "center-button pad2">
+        <button ion-button color = "light" (click) = "register()" full>Register</button>
+    </div>-->
+
+
+</ion-content>

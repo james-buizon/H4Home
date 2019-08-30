@@ -1,0 +1,33 @@
+<ion-header>
+
+    <ion-navbar>
+
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+    <ion-title class="center">{{ viewTitle }}</ion-title>
+
+      <div class = "move">
+          <calendar #myCalendar
+          [eventSource] = "eventSource"
+          [calendarMode]="calendar.mode"
+          [currentDate]="calendar.currentDate"
+          (onEventSelected) = "onEventSelected($event)"
+          (onTitleChanged) = "onViewTitleChanged($event)"
+          (onTimeSelected) = "onTimeSelected($event)"
+          (onCurrentDateChanged)="onCurrentDateChanged($event)"
+          step = "30"
+          class="calendar">
+          </calendar>
+
+      </div>
+
+      <ion-buttons end>
+          <button ion-button icon-only (click) = "saveInfo()">
+              <ion-icon name="add"></ion-icon>
+          </button>
+        </ion-buttons>
+
+</ion-content>

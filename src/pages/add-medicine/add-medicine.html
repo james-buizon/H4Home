@@ -1,0 +1,60 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>addMedicine</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label stacked>Generic Name</ion-label>
+        <ion-select [(ngModel)]="medicine">
+          <ion-option *ngFor="let name of names" value = "{{name}}"> {{name}} </ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Brand Name</ion-label>
+        <ion-input type = "text" [(ngModel)]="brandName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Dosage</ion-label>
+        <ion-input type = "text" [(ngModel)]="dosage"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Dosage Form</ion-label>
+        <ion-input type = "text" [(ngModel)]="dosageForm"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Quantity</ion-label>
+        <ion-input type = "text" [(ngModel)]="qty"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Time</ion-label>
+        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="time"></ion-datetime>
+    </ion-item>
+
+        <ion-grid>
+            <ion-row class="mg">
+              <ion-col col-6 >
+                <button ion-button full (click)="goBack()">
+                  CANCEL
+                </button>
+              </ion-col>
+              <ion-col col-6>
+                <button ion-button full (click)="saveInfo()">
+                  SAVE
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+
+</ion-content>

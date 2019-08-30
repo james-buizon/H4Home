@@ -1,0 +1,15 @@
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>HIV INFO</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-tabs tabsPlacement = "top" class="tabs-icon-text" [color]="isAndroid ? 'positive' : 'light'">
+  <ion-tab tabTitle="GUIDELINES" [root]="guidelinesPage"></ion-tab>
+  <ion-tab tabTitle="NEWS AND UPDATES" [root]="newsAndUpdatesPage"></ion-tab>
+  <ion-tab tabTitle="OTHER INFO" [root]="otherInfoPage"></ion-tab>
+  <ion-tab tabTitle="PREVENTION" [root]="preventionPage"></ion-tab>
+</ion-tabs>

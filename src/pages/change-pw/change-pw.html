@@ -1,0 +1,31 @@
+<ion-header>
+
+    <ion-navbar color = "primary">
+        <ion-title>H4HOME</ion-title>
+      </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label stacked>Old Password:</ion-label>
+        <ion-input type = "password" [(ngModel)]="title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>New Password:</ion-label>
+        <ion-input type = "password" [(ngModel)]="title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Confirm New Password:</ion-label>
+        <ion-input type = "password" [(ngModel)]="title"></ion-input>
+    </ion-item>
+
+    <div class = "pd">
+        <button ion-button (click) = "save()" full>SAVE</button>
+    </div>
+
+</ion-content>

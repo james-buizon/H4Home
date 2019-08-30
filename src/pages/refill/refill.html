@@ -1,0 +1,33 @@
+<!--
+  Generated template for the RefillPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>refill</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class = "refill-button">
+        <ion-title>Medicine Refill</ion-title>
+    </div>
+
+    <ion-list class="mg">
+        <button ion-item text-wrap *ngFor="let name of generic_name; let i = index;" (click)="presentPrompt(i)">
+          {{ name }} <br>
+          {{brand_name[i]}}
+          <h4> Quantity: {{qty[i]}} </h4>
+          <h5 *ngIf="qty[i] >= 11">Status: Good</h5>
+          <h5 *ngIf="qty[i] <= 5">Status: Critical</h5>
+          <h5 *ngIf="qty[i] >= 6 && qty[i] <= 10">Status: Warning</h5>
+          <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+        </button>
+    </ion-list>
+
+</ion-content>

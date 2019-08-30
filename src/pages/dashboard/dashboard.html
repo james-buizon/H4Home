@@ -1,0 +1,76 @@
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>H4HOME</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goToHome()" class="btnHome">
+        <ion-icon name="home"></ion-icon>
+        HOME
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+ 
+</ion-header>
+
+<ion-content class = "no-scroll">
+  
+      <div class="section">
+          <div class = "text">
+            <ion-icon name = "medkit"></ion-icon>
+            MEDICATION    
+            <button end class="btnSize marg1">AM</button>
+            <button end class="btnSize">PM</button>
+          </div>  
+          <ion-scroll style="height: 155px; margin-top: 5px;" scrollY="true">
+              <ion-list>
+                  <button ion-item text-wrap *ngFor="let name of generic_name; let i = index">
+                      {{ name }} <br>
+                      {{brand_name[i]}}
+                      <h4 >Time: {{ time[i] }} <br> Dosage: {{dosage[i]}} <br> Quantity: {{qty[i]}}</h4>
+                      <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+                    </button>
+              </ion-list>
+            </ion-scroll>
+      </div>
+
+      <div class="section2">
+          <div class = "text">
+            <ion-icon name = "calendar"></ion-icon>
+            APPOINTMENT    
+          </div>  
+          <ion-scroll style="height: 165px;" scrollY="true">
+            <ion-list>
+               <button ion-item text-wrap *ngFor="let item of items; let i = index">
+                 <div class = "itemFont">{{item}}</div>
+                 <div class = "indent">
+                   <ion-icon name="pin"></ion-icon>
+                   {{locations[i]}}
+                </div>
+                <div class = "indent">
+                 <ion-icon name="time"></ion-icon> 
+                  {{fromTime[i]}} - {{toTime[i]}}
+                </div>
+              </button>
+            </ion-list>
+          </ion-scroll>
+      </div>
+
+      <div class="section3">
+          <div class = "text">
+            <ion-icon name = "flask"></ion-icon>
+            PILL REFILL   
+          </div>
+          <ion-scroll style="height: 170px;" scrollY="true">
+            <ion-list>
+              <button ion-item text-wrap *ngFor="let name of generic_name; let i = index">
+                  {{ name }} <br>
+                  {{brand_name[i]}}
+                  <h4> Quantity: {{qty[i]}} </h4>
+                  <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+              </button>
+            </ion-list>
+          </ion-scroll>  
+      </div>
+ 
+  
+</ion-content>

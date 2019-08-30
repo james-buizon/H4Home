@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>saveAppointment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label stacked>Appointment</ion-label>
+        <ion-input type = "text" [(ngModel)]="title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Location</ion-label>
+        <ion-input type = "text" [(ngModel)]="location"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>From</ion-label>
+        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="from"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>To</ion-label>
+        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="to"></ion-datetime>
+    </ion-item>
+
+
+    <div class = "pad">
+    <ion-grid>
+        <ion-row>
+          <ion-col col-6 >
+            <button ion-button full (click)="goBack()">
+              CANCEL
+            </button>
+          </ion-col>
+          <ion-col col-6>
+            <button ion-button full (click)="saveInfo()">
+              SAVE
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+</ion-content>

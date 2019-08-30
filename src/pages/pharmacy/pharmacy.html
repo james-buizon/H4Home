@@ -1,0 +1,14 @@
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>H4HOME</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-tabs tabsPlacement = "top" class="tabs-icon-text" [color]="isAndroid ? 'positive' : 'light'">
+    <ion-tab tabTitle="TREATMENT HUB" [root]="treatmentHubPage"></ion-tab>
+    <ion-tab tabTitle="TESTING SITE" [root]="testingSitePage"></ion-tab>
+</ion-tabs>
+

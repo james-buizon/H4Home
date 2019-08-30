@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar color = "primary">
+    
+    <ion-buttons left>
+      <button ion-button navPop icon-only>
+        <ion-icon ios = "ios-arrow-back" md="md-arrow-back" (click)="goToDashboard()"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>MEDICATION</ion-title>
+  </ion-navbar>
+
+  <ion-content></ion-content>
+
+</ion-header>
+
+
+<ion-tabs tabsPlacement = "top" [color]="isAndroid ? 'positive' : 'light'" text-wrap>
+    <ion-tab tabTitle="PILL REMINDER" [root]="pillReminderPage"></ion-tab>
+    <ion-tab tabTitle="APPOINT-MENT" [root]="appointmentPage"></ion-tab>
+    <ion-tab tabTitle="REFILL" [root]="refillPage"></ion-tab>
+    <ion-tab tabTitle="VIRAL LOAD" [root]="viralLoadPage"></ion-tab>
+    <ion-tab tabTitle="CD4 TRACKING" [root]="cd4TrackingPage"></ion-tab>
+</ion-tabs>
+
+
+

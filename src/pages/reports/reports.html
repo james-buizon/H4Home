@@ -1,0 +1,47 @@
+<ion-header>
+
+    <ion-navbar color = "primary">
+        <ion-title>H4HOME</ion-title>
+      </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class = "mg">
+    <ion-item>
+        <ion-label fixed>Year</ion-label>
+        <ion-select [(ngModel)]="year" interface="popover" class = "myCustomSelect">
+            <ion-option value="2017">2017</ion-option>
+            <ion-option value="2018">2018</ion-option>
+            <ion-option value="2019">2019</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label fixed>Month</ion-label>
+        <ion-select [(ngModel)]="month" interface="popover" class = "myCustomSelect">
+            <ion-option value="1">1</ion-option>
+            <ion-option value="2">2</ion-option>
+            <ion-option value="3">3</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label fixed>Status</ion-label>
+        <ion-select [(ngModel)]="status" interface="popover" class = "myCustomSelect">
+            <ion-option value="Taken">Taken</ion-option>
+            <ion-option value="Missed">Missed</ion-option>
+            <ion-option value="All">All</ion-option>
+        </ion-select>
+    </ion-item>
+    </div>
+    <div class="row header">
+        <div class="col">Brand Name</div>
+        <div class="col">Date and Time</div>
+        <div class="col">Status</div>
+        
+    </div>
+      
+
+</ion-content>

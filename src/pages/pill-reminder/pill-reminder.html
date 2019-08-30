@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ viewTitle }} </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <ion-buttons end>
+        <button ion-button icon-only (click)="addMedicine()">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-buttons>
+
+    <ion-list class="mg">
+        <button ion-item text-wrap *ngFor="let name of generic_name; let i = index">
+          {{ name }} <br>
+          {{brand_name[i]}}
+          <h4 >Time: {{ time[i] }} <br> Dosage: {{dosage[i]}} <br> Quantity: {{qty[i]}}</h4>
+          <br>
+          <h4 *ngIf = "status[i] != ''">Status: {{status[i]}}</h4>
+          <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+        </button>
+    </ion-list>
+
+</ion-content>

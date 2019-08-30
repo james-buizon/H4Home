@@ -1,0 +1,27 @@
+ion-icon {
+    &[class*="custom-"] {
+        margin: 0 5px 0 0;
+        vertical-align: middle;
+        $sz: 20px;
+        width: $sz;
+        height: $sz;
+    } // custom icons
+    &[class*="druginfo"] {
+        background: url(../assets/images/druginfo.png) no-repeat 50% 50%;
+        background-size: contain;
+    }
+    &[class*="medicine"] {
+        background: url(../assets/images/medicine.png) no-repeat 50% 50%;
+        background-size: contain;
+    }
+}
+
+/*.tabs-md .tab-button-text {
+	font-size: 9px;
+}*/
+
+/*.tabbar{
+    a:nth-of-type(1){
+        
+    }
+}*/
