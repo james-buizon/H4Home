@@ -1,0 +1,8 @@
+{
+  "name": "h4home",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "id": "247628a4"
+}
