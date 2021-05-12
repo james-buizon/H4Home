@@ -28,7 +28,7 @@
     "@ionic/pro": "2.0.3",
     "@ionic/storage": "^2.2.0",
     "angularfire2": "^5.0.2",
-    "chart.js": "^2.7.3",
+    "chart.js": "^2.9.4",
     "cordova": "^9.0.0",
     "cordova-android": "7.1.4",
     "cordova-browser": "5.0.4",
